@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/brown_bg"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Dept., Subject and Year"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="25dp"
+        android:layout_margin="30dp"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_toRightOf="@+id/textView1" />
+
+    <Spinner
+        android:id="@+id/spinnerSE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_alignLeft="@+id/spinneryear"
+        android:layout_below="@+id/spinneryear" />
+
+    <Spinner
+        android:id="@+id/spinneryear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_alignLeft="@+id/spinner1"
+        android:layout_below="@+id/spinner1" />
+
+    <ImageButton
+        android:id="@+id/DateImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinnerSE"
+        android:layout_below="@+id/spinnerSE"
+        android:cropToPadding="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/calendar_icon"
+        android:layout_gravity="left"/>
+
+
+    <EditText
+        android:id="@+id/DateEditText"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/DateImageButton"
+        android:layout_toLeftOf="@+id/spinnerSE"
+        android:layout_margin="5dp"
+        android:background="#ffffff"
+        android:editable="false"
+        android:ems="10"
+        android:layout_gravity="left"
+        android:hint="Select date using the above button"
+        android:gravity="center"
+        android:padding="5dp">
+        <requestFocus />
+    </EditText>
+
+
+    <Button
+        android:id="@+id/buttonsubmit"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/DateImageButton"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/roundedbutton"
+        android:text="Add Attendance" />
+
+    <Button
+        android:id="@+id/viewTotalAttendanceButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/roundedbutton"
+        android:text="View Total Attendance" />
+
+    <Button
+        android:id="@+id/viewAttendancebutton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/roundedbutton"
+        android:text="View Attendance" />
+
+</LinearLayout>
